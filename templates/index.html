@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+    <style>
+        .text{
+            width: 95vw;
+            height: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .text input{
+            width: 20rem;
+            height: 10rem;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+            font-size: 2rem;
+        }
+        button{
+            border-radius: 5px;
+            width: 7rem;
+            height: 2rem;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello {{name}} </h1>
+    <div class="text">
+        <input type="text">
+        <div class="btn">
+            <button>UPPERCASE</button>
+            <button>lowercase</button>
+        </div>
+    </div>
+</body>
+</html>
