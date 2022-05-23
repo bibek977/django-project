@@ -13,7 +13,7 @@
             justify-content: center;
             align-items: center;
         }
-        .text input{
+        .text #input{
             width: 20rem;
             height: 10rem;
             border-radius: 10px;
@@ -32,12 +32,21 @@
 </head>
 <body>
     <h1>Hello {{name}} </h1>
-    <div class="text">
-        <input type="text">
-        <div class="btn">
-            <button>UPPERCASE</button>
-            <button>lowercase</button>
+    <form action="/result" method="post">
+        {% csrf_token %}
+
+        <div class="text">
+            <input name="text" type="text" id="input">
+            <div class="btn">
+                <label for="removepunc">Remove Punc</label>
+                <input type="checkbox" id="removepunc"  name="removepunc">
+                <label for="upper">Upper Case</label>
+                <input type="checkbox" id="upper"  name="upper">
+                <label for="space">Space Remover</label>
+                <input type="checkbox" id="space"  name="space">
+                <button type="submit">Result</button>
+            </div>
         </div>
-    </div>
+    </form>
 </body>
 </html>
